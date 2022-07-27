@@ -1,6 +1,6 @@
 ﻿//!*script
 /**
- * Delete all history in the reference
+ * Delete all currently referenced history
  *
  */
 
@@ -8,15 +8,30 @@
 
 const whistory = PPx.Extract('%*editprop(whistory)').toLowerCase();
 const whValue = {
-  g: 'general', p: 'PPc', v: 'PPv', n: 'number', m: 'mask', s: 'search', h: 'command',
-  d: 'directory', c: 'file', f: 'path', u: 'user1', x: 'user2'
+  g: 'general',
+  p: 'PPc',
+  v: 'PPv',
+  n: 'number',
+  m: 'mask',
+  s: 'search',
+  h: 'command',
+  d: 'directory',
+  c: 'file',
+  f: 'path',
+  u: 'user1',
+  x: 'user2'
 }[whistory];
 
+const warn = (msg) => PPx.Execute(`%"Delete all histories"${msg}`);
+
 if (whValue === undefined) {
-  PPx.Execute('%"Delete all history"%I"No history"');
+  warn('%I"No histories"');
+  PPx.Quit(1);
+} else if (whistory === 'p' || whistory === 'v') {
+  warn(`%I"${whValue}-history is not supported"`);
   PPx.Quit(1);
 } else {
-  !PPx.Execute(`%"Delete all history"%Q"Delete all ${whValue}-history?"`) || PPx.Quit(1);
+  !warn(`%Q"Delete all ${whValue}-history?"`) || PPx.Quit(1);
 }
 
 let loop = 'true';
@@ -25,5 +40,4 @@ while (loop !== '') {
   PPx.Execute(`*deletehistory ${whistory},0`);
 }
 
-PPx.SetPopLineMessage(`delete ${whistory}`);
-
+PPx.SetPopLineMessage(`All ${whValue}-history deleted`);

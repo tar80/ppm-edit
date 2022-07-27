@@ -1,21 +1,21 @@
 ﻿PPM_PLUGIN_NAME=ppm-edit
 
 #Plugin version
-VERSION=1.51
+VERSION=1.52
 
 #Requires ppm version
 PPM_VERSION=0.13
 
-#Requires ppx version
+#Requires PPx version
 PPX_VERSION=18403
 
-#Requires ppx script module version
+#Requires PPx Script Module version
 SCRIPT_VERSION=18
 
 #Requires external executables. Separated dy commas
 EXECUTABLES=
 
-#Requires PPx-modules. Separated dy commas
+#Requires PPx Modules and Common Archivers Library. Separated dy commas
 MODULES=ppxmes
 
 #Comma separated dependent plugins. Just a note
@@ -27,8 +27,11 @@ CODETYPE_PERMISSION=1
 #ScriptType permisson. 0:No restriction | 1:JS9(5.7) | 2:JS9(5.8) | 3:JS9(ES5) | 4:Chakra(ES6)
 SCRIPTTYPE_PERMISSION=0
 
-#To copy files in the sheet directory. true | false
+#To copy files in the Sheet directory. true | false
 COPY_FLAG=false
+
+#To copy files in the Userscript directory. true | false
+COPY_SCRIPT=false
 
 #Copy by specifying the directory-name
 SPECIFIC_COPY_DIR=
