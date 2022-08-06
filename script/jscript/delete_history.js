@@ -28,9 +28,6 @@ var warn = function (msg) {
 if (typeof whValue === 'undefined') {
   warn('%I"No histories"');
   PPx.Quit(1);
-} else if (whistory === 'p' || whistory === 'v') {
-  warn('%I"' + whValue + '-history is not supported"');
-  PPx.Quit(1);
 } else {
   !warn('%Q"Delete all ' + whValue + '-history?"') || PPx.Quit(1);
 }
