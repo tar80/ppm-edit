@@ -1,13 +1,13 @@
 ﻿PPM_PLUGIN_NAME=ppm-edit
 
 #Plugin version
-VERSION=1.52
+VERSION=1.6
 
 #Requires ppm version
-PPM_VERSION=0.13
+PPM_VERSION=0.87
 
 #Requires PPx version
-PPX_VERSION=18403
+PPX_VERSION=187
 
 #Requires PPx Script Module version
 SCRIPT_VERSION=18
@@ -34,4 +34,4 @@ COPY_FLAG=false
 COPY_SCRIPT=false
 
 #Copy by specifying the directory-name
-SPECIFIC_COPY_DIR=
+SPECIFIC_COPY_DIR=template

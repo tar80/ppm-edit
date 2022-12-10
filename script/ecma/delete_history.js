@@ -7,7 +7,7 @@
 'use strict';
 
 const whistory = PPx.Extract('%*editprop(whistory)').toLowerCase();
-const whValue = {
+const wh_value = {
   g: 'general',
   p: 'PPc',
   v: 'PPv',
@@ -24,11 +24,11 @@ const whValue = {
 
 const warn = (msg) => PPx.Execute(`%"Delete all histories"${msg}`);
 
-if (whValue === undefined) {
+if (wh_value === undefined) {
   warn('%I"No histories"');
   PPx.Quit(1);
 } else {
-  !warn(`%Q"Delete all ${whValue}-history?"`) || PPx.Quit(1);
+  !warn(`%Q"Delete all ${wh_value}-history?"`) || PPx.Quit(1);
 }
 
 let loop = 'true';
@@ -37,4 +37,4 @@ while (loop !== '') {
   PPx.Execute(`*deletehistory ${whistory},0`);
 }
 
-PPx.SetPopLineMessage(`All ${whValue}-history deleted`);
+PPx.SetPopLineMessage(`All ${wh_value}-history deleted`);
