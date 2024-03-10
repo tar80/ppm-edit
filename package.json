@@ -1,6 +1,6 @@
 {
   "name": "@ppmdev/ppm-edit",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Editor-related enhancements",
   "main": "index.js",
   "directories": {
