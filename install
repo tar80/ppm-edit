@@ -1,17 +1,18 @@
 ﻿PPM_PLUGIN_NAME=ppm-edit
 
 #Plugin version
-VERSION=1.7.2
+VERSION=1.8.0
 
 #Requires ppm version
-PPM_VERSION=0.94
+PPM_VERSION=0.95
 
 #Requires PPx version
-PPX_VERSION=195
+PPX_VERSION=19701
 
 #Requires PPx Script Module version
 SCRIPT_VERSION=21
 CV8_VERSION=3
+QJS_VERSION=0
 
 #Requires external executables. Separated dy commas
 EXECUTABLES=

@@ -4,7 +4,7 @@ export const langDeleteHistory = {
     question: (word: string) => `Do you want to delete all history of ${word}?`,
     completed: (word: string) => `Deleted all history of the ${word}.`
   },
-  jp: {
+  ja: {
     noReferenced: '参照履歴が設定されていません',
     question: (word: string) => `${word} の全履歴を削除しますか？`,
     completed: (word: string) => `${word} の全履歴を削除しました`
@@ -18,7 +18,7 @@ export const langCreateNewFile = {
     wrongFormat: 'wrong format',
     liedtitle: 'Create new file'
   },
-  jp: {
+  ja: {
     notExist: 'このディレクトリには作成できません',
     sourceNotFound: 'S_ppm#source:ppm-edit がありません',
     wrongFormat: 'フォーマットが間違っています',
