@@ -26,7 +26,8 @@ PPxの編集機能を強化します。
 構成ファイルの説明
 
 	dist\deleteHistory.js	参照中のヒストリ履歴を全削除
-	dist\createNewFile.js		新規ファイルを作成しテンプレートを挿入
+	dist\createNewFile.js	新規ファイルを作成しテンプレートを挿入
+	dist\expandMacro.js	選択範囲の文字列をマクロとして展開
 	bin\make_templatelist.exe
 		テンプレート名を記述した補完リストを作成
 		中身はjluaでexe化したlua script
@@ -47,12 +48,12 @@ PPxの編集機能を強化します。
 		Ctrl+A		行頭へ移動
 		Ctrl+E		行末へ移動
 
-	PPe
-		F12		PPx設定情報を挿入
+	PPe・一行編集
 		Ctrl+Shift+:	選択したテキストをコマンドとして実行
 		Ctrl+Shift+@	選択したテキストを%*getcust()
 		Ctrl+Shit+D	参照中の履歴情報を全削除
 		Ctrl+Shift+A	全選択
+		Ctrl+5		選択範囲の文字列をマクロとして展開
 		Ctrl+A		行頭へ移動
 		Ctrl+E		行末へ移動
 		Ctrl+B		ひとつ前の文字
@@ -75,6 +76,8 @@ PPxの編集機能を強化します。
 			,	,で区切られた範囲
 			;	行選択
 
+	PPcust
+		F12		PPx設定情報を挿入
 ===============================================================================
 テンプレート機能
 
