@@ -12,18 +12,20 @@ const main = () => {
   let result = '';
 
   if (text.indexOf('%') === 0) {
-    result = PPx.Extract(text);
+    result = text;
   } else if (text.indexOf('u') === 0) {
-    result = PPx.Extract(`%b${text.substring(1)}`);
+    result = `%b${text.substring(1)}`;
   } else if (text.indexOf('x') === 0) {
-    result = PPx.Extract(`%b${text}`);
+    result = `%b${text}`;
+  } else if (~text.indexOf('_')) {
+    result = `%*getcust(${text.replace(/^([^\s]+).*/, '$1')})`;
   }
 
   if (isEmptyStr(result)) {
     return;
   }
 
-  isPrint ? PPx.linemessage(result) : PPx.Execute(`*insert ${result}`);
+  isPrint ? PPx.linemessage(PPx.Extract(result)) : PPx.Execute(`*insert "${result}"`);
 };
 
 main();
